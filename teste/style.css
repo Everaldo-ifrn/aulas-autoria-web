@@ -1,0 +1,32 @@
+.azul {
+    /* 300 x 150 */
+    width: 300px;
+    height: 150px;
+    background-color: blue;
+}
+.verde {
+    /* 650 x 120 */
+    width: 350px;
+    height: 120px;
+    background-color: green;
+    position: relative;
+    display: inline-block;
+    
+}
+p {
+    background-color: lightblue;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    margin: 0px;
+
+}
+
+.roxo {
+    background-color: purple;
+    height: 100px;
+    width: 400px;
+    position: sticky;
+    top: 100px;
+}
