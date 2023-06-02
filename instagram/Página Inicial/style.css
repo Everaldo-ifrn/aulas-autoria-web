@@ -1,0 +1,14 @@
+.gato {
+    border-radius: 50px;
+    border: 3px solid green;
+    width: 100px;
+    height: 100px;
+}
+
+#g1 {
+    border: 3px solid gray;
+}
+
+#titulo {
+    font-family: Grandista;
+}
