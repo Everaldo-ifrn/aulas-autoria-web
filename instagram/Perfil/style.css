@@ -1,0 +1,18 @@
+img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%; 
+}
+
+h5 {
+    margin: 0px;
+}
+
+.elemento1 {
+    text-align:center;
+}
+
+.elemento2 {
+    background-color: gray;
+    border-radius: 10%;
+}
