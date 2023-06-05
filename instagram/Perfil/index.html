@@ -2,37 +2,129 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <title>Perfil - everaldo_junior034</title>
     </head>
 
     <body>
-        <h1>everaldo_junior034</h1>
         <table>
-            <tr>
-                <td rowspan="2" class="elemento1"><img src="./foto_perfil.jpeg"></td>
-                <td class="elemento1"><strong>32</strong></td>
-                <td class="elemento1"><strong>96</strong></td>
-                <td class="elemento1"><strong>83</strong></td>
-            </tr>
-
-            <tr>
-                <td class="elemento1">Publicações</td>
-                <td class="elemento1">Seguidores</td>
-                <td class="elemento1">Seguindo</td>
+            <tr id="linha_inicial">
+                <td class="elemento_inicial"><i class="fa fa-solid fa-lock" id="cadeado"></i></td>
+                <td class="elemento_inicial" id="nome_user"> <h2>everaldo_junior034</h2> </td>
+                <td class="elemento_inicial"><i class="fa fa-solid fa-angle-down"></i></td>
+                <td class="elemento_inicial"><i class="fa fa-solid fa-plus" id="quadrado_mais"></i></td>
+                <td class="elemento_inicial"><i class="fa fa-solid fa-bars"></i></td>
             </tr>
         </table>
-        <h5>Everaldo Júnior</h5>
-        [Biografía...]
         
         <table>
             <tr>
-                <td class="elemento2"><h5>Editar perfil</h5></td>
-                <td class="elemento2"><h5>Compartilhar perfil</h5></td>
-                <td class="elemento2"><h5>Ícone</h5></td>
+                <td rowspan="2" class="elemento_info"><img src="./fotos/foto_perfil.jpeg" id="perfil"></td>
+                <td class="elemento_info"><strong>32</strong> <br> Publicações</td>
+                <td class="elemento_info"><strong>96</strong> <br> Seguidores</td>
+                <td class="elemento_info"><strong>83</strong> <br> Seguindo </td>
             </tr>
         </table>
 
-        <strong>[NÃO ESQUEÇA DE COLOCAR OS ÍCONES E A PARTE DE CIMA COMO FIXA]</strong>
+        <span id="nome"><strong>Everaldo Júnior</strong></span>
+        
+        <table>
+            <tr>
+                <td class="biografia_elemento">&#x1F4BB; | Técnico em Informática .../4</td>
+            </tr>
+
+            <tr>
+                <td class="biografia_elemento">&#x1F3EB; | @ifrnoficial</td>
+            </tr>
+
+            <tr>
+                <td class="biografia_elemento">&#x1F49A; | BR - RN</td>
+            </tr>
+
+            <tr>
+                <td id="biografia">&#x2728;...Desistir nuca será uma opção..&#x2728;</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td class="elemento2">Editar perfil</td>
+                <td class="elemento2">Compartilhar perfil</td>
+                <td class="elemento2" id="icone_2"> <i class="fa fa-light fa-user-plus"></i> </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td class="destaque_espaco"><img src="./fotos/destaque1.jpeg" class="destaque"></td>
+                <td class="destaque_espaco"><img src="./fotos/destaque2.jpeg" class="destaque"></td>
+                <td class="destaque_espaco"><img src="./fotos/destaque3.jpeg" class="destaque"></td>
+                <td class="destaque_espaco"><img src="./fotos/destaque3.jpeg" class="destaque"></td>
+                <td class="icone destaque_espaco"> <i class="fa fa-solid fa-plus" id="icone"></i> </td>
+
+            </tr>
+            
+
+            <tr>
+                <td class="elemento1">Praia &#x1F30A;</td>
+                <td class="elemento1">IFRN &#x1F49A;</td>
+                <td class="elemento1">1ª dose &#x1F489;</td>
+                <td class="elemento1">2ª dose &#x1F489;</td>
+                <td class="elemento1">Novo</td>
+            </tr>
+        </table>
+
+        <table id="linha_opcoes">
+            <tr>
+                <td><i class="fa fa-solid fa-table" id="tabela"></i></td>
+                <td><i class="fa fa-regular fa-user" id="pessoa"></i></td>
+            </tr>
+
+            <tr>
+                <td><hr></td>
+                <td id="linha_editada"></td>
+            </tr>
+        </table>
+
+        <table id="tabelaPosts">
+            <tr>
+                <td class="elementoPost"><img src="./fotos/foto1.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto2.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto3.jpeg" class="posts"></td>
+            </tr>
+
+            <tr>
+                <td class="elementoPost"><img src="./fotos/foto4.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto5.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto6.jpeg" class="posts"></td>
+            </tr>
+
+            <tr>
+                <td class="elementoPost"><img src="./fotos/foto1.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto2.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto3.jpeg" class="posts"></td>
+            </tr>
+
+            <tr>
+                <td class="elementoPost"><img src="./fotos/foto4.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto5.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto6.jpeg" class="posts"></td>
+            </tr>
+
+            <tr>
+                <td class="elementoPost"><img src="./fotos/foto1.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto2.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto3.jpeg" class="posts"></td>
+            </tr>
+
+            <tr>
+                <td class="elementoPost"><img src="./fotos/foto4.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto5.jpeg" class="posts"></td>
+                <td class="elementoPost"><img src="./fotos/foto6.jpeg" class="posts"></td>
+            </tr>
+        </table>
+
+        <!--NÃO ESQUEÇA DE COLOCAR OS ÍCONES E A PARTE DE CIMA COMO FIXA e TERMINE DE COLOCAR AS FOTOS E ÍCONES-->
 
     </body>
 </html>

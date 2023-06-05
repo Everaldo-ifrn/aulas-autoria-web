@@ -15,7 +15,7 @@
 }
 p {
     background-color: lightblue;
-    position: fixed;
+    position:fixed;
     left: 0px;
     top: 0px;
     z-index: 1;
@@ -28,5 +28,6 @@ p {
     height: 100px;
     width: 400px;
     position: sticky;
-    top: 100px;
+    top: 50px;
 }
+
