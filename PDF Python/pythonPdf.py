@@ -1,24 +1,38 @@
-from docx import Document
-import win32com.client
 
-document = Document()
-str = "Olá, sou um teste! Será que funcionei???"
-document.add_paragraph(str)
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter
 
-document.save("oi.docx")
+# Cria um novo arquivo PDF
+c = canvas.Canvas("C:\\Users\\Everaldo Junior\\Documents\\Algorítmos - Autoria Web\\aulas-autoria-web\\PDF Python\\meu_documento.pdf", pagesize=letter)
+
+# Adiciona texto
+c.drawString(100, 700, "Olá, mundo!")
+
+# Adiciona uma imagem
+c.drawInlineImage("C:\\Users\\Everaldo Junior\\Documents\\Algorítmos - Autoria Web\\aulas-autoria-web\\PDF Python\\eu.jpeg", 100, 500)
+
+# Finaliza o arquivo PDF
+c.save()
+
 
 """
-# Cria uma instância do Word
-word_app = win32com.client.Dispatch("Word.Application")
-word_app.Visible = False  # Mantém o Word invisível
+from docx import Document
 
-# Abre o documento .docx
-doc = word_app.Documents.Open("Área de Trabalho\oi.docx")
+document = Document()
+document.add_heading('Tabela', level=1)
 
-# Salva o documento como PDF
-doc.SaveAs("Área de Trabalho/oi.pdf", FileFormat=17)  # 17 é o código para formato PDF
+table = document.add_table(rows=3, cols=3)
+table.cell(0, 0).text = "testeH"
+table.cell(0, 1).text = "testeHHH"
+table.cell(0, 2).text = "teste"
+table.cell(1, 0).text = "teste"
+table.cell(1, 1).text = "teste"
+table.cell(1, 2).text = "teste"
+table.cell(2, 0).text = "teste"
+table.cell(2, 1).text = "teste"
+table.cell(2, 2).text = "teste"
 
-# Fecha o documento e o Word
-doc.Close()
-word_app.Quit()
+document.save("C:\\Users\\Everaldo Junior\\Documents\\Algorítmos - Autoria Web\\aulas-autoria-web\\PDF Python\\Autoria.pdf") #onde o documento vai ser salvo
+
+#DOCUMENTAÇÃO PYTHON-DOCX: https://python-docx.readthedocs.io/en/latest/
 """
