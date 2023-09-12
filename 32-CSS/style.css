@@ -1,0 +1,87 @@
+body{
+    background-color: black;
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    opacity: 0.9;
+    text-align: center;
+    
+}
+
+#logo{
+    height: 50px;
+    margin-left: 10px;
+}
+
+.nav{
+    text-decoration: underline;
+    display: flex;
+}
+
+
+.mission{
+    background-image: url(./resources/img-mission-background.webp);
+    height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.descricao{
+    background: black;
+    width: 1200px;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    height: 69px;
+    background-color: black;
+    top: 0px;
+}
+
+.nav{
+    display: flex;
+    width: 100%;
+    justify-content:flex-end;
+}
+
+.tea img{
+    width: 300px;
+    height: 200px;
+}
+
+figure{
+    margin: auto;
+}
+
+.texto{
+    text-align: left;
+}
+
+.fotos{
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+
+}
+
+.location{
+    background-image: url(./resources/img-locations-background.jpg);
+    height: 500px;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    
+}
+.location div{
+    background-color: black;
+    width: 300px;
+    opacity: 1;
+    margin: 0 40px;
+
+}
+
