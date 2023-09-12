@@ -35,5 +35,12 @@ table.setStyle(style)
 table.wrapOn(cnv, 200, 400)
 table.drawOn(cnv, 30, 700)
 
+cnv.acroForm.textfield(
+    name='nome',        # Nome do campo
+    value='escreva',           # Valor inicial
+    x=100, y=650,       # Posição na página
+    width=300, height=20,  # Tamanho do campo
+)
+
 #Salvei o arquivo
 cnv.save()

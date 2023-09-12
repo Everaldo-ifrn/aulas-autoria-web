@@ -1,0 +1,231 @@
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+body{
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 70px;
+    background-color: #11142616;
+    
+
+}
+
+header{
+    background-color: #111426;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+
+}
+
+header h2{
+    color: lightgrey;
+    font-size: 25px;
+    padding-left: 2%;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+}
+
+nav h2{
+    margin: 5px;
+}
+
+nav a{
+    text-decoration: none;
+    color: lightgrey;
+}
+
+nav a:hover{
+    background-color: #51a6a6;
+    border-radius: 6px;
+    padding: 4px;
+    color:#111426;
+    font-size:17px;
+    text-decoration: underline;
+    font-weight: bold;
+    
+}
+
+.hero{
+    background-image: linear-gradient(to right, #111426, #111426e2 );
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    
+}
+
+.hero h1{
+    color: lightgrey;
+    font-size:45px;
+    text-shadow: 9px 9px 10px black;
+    padding: 0 5%;
+    
+}
+
+.hero img{
+    box-shadow: -10px 10px 8px black;
+    width: 25%;
+    border-radius: 20px;
+    margin: 15% 0;
+}
+
+.apresentacao{
+    color: #111426;
+}
+
+.apresentacao img{
+    box-shadow: 10px 10px 10px #111426;
+    border-radius: 100%;
+    border: 10px solid lightgrey;
+    
+}
+
+#minhaDescricao{
+    width: 50%;
+    height: 100%;
+    background-color: #51a6a6ee;
+    padding: 10px;
+    border-radius: 15px;
+    margin-right: 7%;
+} 
+
+#comprimento{
+    text-align: center;
+}
+
+.apresentacao h2{
+    margin-top: 0;
+    text-align: center;
+}
+
+.euMaisDescricao{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#curiosidades{
+    text-align: center;
+    color: #111426;
+}
+
+#curiosidades ol{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+}
+
+#curiosidades li{
+    background-color: #51a6a6;
+    border-radius: 15px;
+    padding: 1%;
+    height: 100%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+#educacao{
+    color: #111426;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#educacao table{
+    width: 30%;
+
+}
+
+#educacao td{
+    padding: 10px;
+}
+
+#educacao th{
+    background-color: #51a6a6;
+}
+
+.linhaSemBackground{
+    background-color: #51a6a69f;
+}
+
+#causos{
+    color: #111426;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#causos p{
+    text-shadow: 1px 1px 1px #111426;
+    color: #51a6a6;
+    background-color: #1114268a;
+    width: 100%;
+    padding: 10px;
+    text-align:justify;
+}
+#causos figure{
+    background-image: url(./fotos/causos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 626px;
+    height: 418px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    border: 4px solid #111426;
+}
+
+#habilidades{
+    color: #111426;
+    text-align: center;
+}
+
+#habilidades ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#habilidades li{
+    background-color: #51a6a6;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+#contato{
+    color: lightgrey;
+    background-color: #111426;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+#contato a, p{
+    color: #51a6a6;
+}
+
+#contato a:hover{
+    background-color: #51a6a6;
+    color: #111426;
+    width: 100%;
+    padding: 1%;
+    border-radius: 30px;
+}
+/* LEMBRE-SE: Responsividade!!! */
