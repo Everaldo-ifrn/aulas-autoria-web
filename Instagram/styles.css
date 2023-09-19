@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300&display=swap');
+
+
+body{
+    width: 470px;
+    height: 930px;
+    border: 1px solid red;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+.quadrado_mais{
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 2px 2px 0.5px 2px;
+}
+
+.navbar{
+    display: flex;
+    width: 429px;
+    height: 37px;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 20px;
+    top: 11px;
+}
+
+.icones{
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.follows{
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    width: 265px;
+    height: 31px;
+    left: 164px;
+    top: 106px;
+    position: absolute;
+    
+}
+
+.perfil{
+    position: absolute;
+    width: 169px;
+    height: 130px;
+    top: 72px;
+    left: 20px;
+}
+
+.perfil img{
+    width: 104px;
+    border-radius: 100%;
+    
+}
+
+.bola_azul{
+    color: white;
+    background-color: #1A75FF;
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 25px;
+    height: 14px;
+    padding-top: 5.5px;
+    padding-bottom: 5.5px;
+    text-align: center;
+    top: 79px;
+    left: 79px;
+    position: absolute;
+}
+
+.perfil p{
+    position: absolute;
+    top: 118px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bt_perfil{
+    width: 434px;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    top: 235px;
+    left: 20px;
+}
+
+.bts{
+   width: 190px;
+   background-color: lightgrey; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   font-weight: 700;
+
+
+}
+
+.diferente_bt{
+    width: 40px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlights{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 294px;
+    left: 21px;
+    width: 449px;
+    
+    
+}
+
+.fotos{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.descricao{
+    display: flex;
+    justify-content:space-between;
+    
+
+}
+
+.highlights img{
+    border-radius: 100%;
+}
+
+.bt_feed_reels_tag{
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+    height: 24px;
+    position: absolute;
+    top: 427px;
+    left: 65px;
+}
+
+.bt{
+    width: 24px;
+    background-color: lightgrey;
+}
+
+.mural{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1px;
+    width: 470px;
+    height: 471px;
+    position: absolute;
+    top: 468px;
+
+}
+
+.mural img{
+    width: 155px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 469px;
+    height: 68px;
+    position: relative;
+    top: 862px;
+    background-color: white;
+    
+}
+
+.footer button{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+.circulo{
+    background-color: lightgrey;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}

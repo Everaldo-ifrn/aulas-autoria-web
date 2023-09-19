@@ -2,35 +2,45 @@
 <html>
     <head>
         <title>Paulo Campus</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <h1>Paulo Campus</h1>
-        <hr>
-
-        <section>
-            <h2>Sumário</h2>
-            <nav>
-                <ol>
-                    <li><a href="#areas de interesse">Áreas de interresse</a></li>
-                    <li><a href="#disciplinas">Disciplinas</a></li>
-                    <li><a href="#educacao">Educação</a></li>
-                    <li><a href="#contato">Contatos</a></li>
-                </ol>  
-            </nav>
+        <header class="header">
+            <img class="logo" src="./Fotos/Screenshot_20230916-000419_2-removebg-preview.png">
+            <ul class="menu">
+                <li><a href="#areasDeInteresse">Áreas de interresse</a></li>
+                <li><a href="#disciplinas">Disciplinas</a></li>
+                <li><a href="#educacao">Educação</a></li>
+                <li><a href="#contato">Contatos</a></li>
+            </ul>  
+        </header>
+        
+        <section class="hero">
+            <img src="./Fotos/Foto sem fundo.png" alt="foto">
+            <div class="texto">
+                <h4>Paulo Campos - professor de Inglês</h4>
+                <div class="botao">
+                    <h5>Mais informações</h5>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Sobre mim</h2>
-            <figure>
-                <img src="./Fotos/foto1.jpeg" alt="Imagem de Paulo Campus" height="250" width="175">
-                <img src="./Fotos/foto2.jpeg" alt="Imagem de Paulo Campus" height="250" width="120">
-            </figure>
-            <p>
-                Sou professor do IFRN há mais de 12 anos. Ensino língua inglesa, minha disciplina de ingresso no Instituto, em diversos níveis acadêmicos. Tenho, aproximadamente, 22 anos de experiência na área, tendo ministrado aulas em curso especializado em idiomas, escolas privadas e públicas (rede municipal [Natal], estadual [estágio] e federal), nos ensinos fundamental, médio e superior, cursos para servidores do IFRN, projetos de extensão e ainda, aulas particulares. Atualmente, estou vinculado à Diretoria Acadêmica do Campus Ceará-Mirim e também ao Núcleo Central Estruturante de língua inglesa do IFRN e meus dias de trabalho presencial são segunda, terça e quinta-feira. <br>
-            </p>
+        <section class="sobreMim">
+            <div class="descricao">
+                <h2>Sobre mim</h2>   
+                <p>
+                    Sou professor do IFRN há mais de 12 anos. Ensino língua inglesa, minha disciplina de ingresso no Instituto, em diversos níveis acadêmicos. Tenho, aproximadamente, 22 anos de experiência na área, tendo ministrado aulas em curso especializado em idiomas, escolas privadas e públicas (rede municipal [Natal], estadual [estágio] e federal), nos ensinos fundamental, médio e superior, cursos para servidores do IFRN, projetos de extensão e ainda, aulas particulares. Atualmente, estou vinculado à Diretoria Acadêmica do Campus Ceará-Mirim e também ao Núcleo Central Estruturante de língua inglesa do IFRN e meus dias de trabalho presencial são segunda, terça e quinta-feira.
+                </p>
+            </div>
+            <img src="./Fotos/foto2.png" width="200px">
         </section>
 
-        <section id="areas de interesse">
+        <section id="areasDeInteresse">
             <h2>Áreas de interesse:</h2>
             <ul>
                 <li>Tenho interesse de investigar e trabalhar com ensino-aprendizagem de línguas estrangeiras;</li>
@@ -132,11 +142,16 @@
         <section id="educacao">
         <h2>Educação:</h2>
         <p>Tenho doutorado e mestrado em Estudos da Linguagem, área de linguística aplicada, pela UFRN. Fiz estágio doutoral presencial por um ano acadêmico (09 meses) na University of California, Berkeley (bolsa Capes/Fulbright). Tenho especialização em Gramática, Texto e Discurso (língua portuguesa) pela UFRN. Sou licenciado em Letras - Língua Inglesa e Literaturas também pela UFRN.</p>
+        <figure>
+            <img src="./Fotos/ufrn.jpg" width="30%">
+            <img src="./Fotos/university.jpg" width="30.5%">
+        </figure>
+        
         </section>
 
-        <section id="contato">
-            <p><strong>Contato:</strong> paulo.campos@ifrn.edu.br</p>
-        </section>
-        <hr>
+        <footer id="contato">
+            <h2>Contato</h2>
+            <p> <strong>Email:</strong> paulo.campos@ifrn.edu.br</p>
+        </footer>
     </body>
 </html>

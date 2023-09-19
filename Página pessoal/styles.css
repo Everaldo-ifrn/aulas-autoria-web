@@ -2,14 +2,158 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     
 }
+/* APAGUE AQUI!!!
+.conteine {
+    height: 100%;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    
+}
+
+.card {
+    margin: 5px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(#111426, #111426);
+    transition: all .5s;
+}
+
+.card:hover {
+    background-image: linear-gradient(#51a6a6, #380e74);
+}
+
+.card .img {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    transition: all .5s;
+    z-index: 2;
+    position: relative;
+    opacity: 0.8;
+    
+}
+
+.card .img span {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 100;
+    font-style: italic;
+    transition: all .5s;
+}
+
+.card:hover .img {
+    width: 430px;
+    opacity: 1;
+}
+
+.card:hover .img span {
+    font-size: 28px;
+}
+
+.card .content {
+    padding: 0px 20px;
+    height: 0;
+    opacity: 0;
+    transition: all .5s;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translateY(30px);
+}
+
+.card:hover .content {
+    height: 100%;
+    padding: 20px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .content p {
+    margin: 0;
+}
+
+.card .content .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card .content .desc {
+    font-size: 20px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8px;
+}
+
+.card .arrow {
+    padding: 15px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card:hover .arrow {
+    transform: rotate(0);
+}
+
+.card .arrow span {
+    font-size: 24px;
+} */
+
+.menu{
+    list-style:none;
+}
+.menu li{
+    position:relative;
+    font-size: 18px;
+}
+.menu li a{
+    color:#51a6a6; 
+    text-decoration:none; 
+    padding:5px 10px; 
+    display:block;
+}
+.menu li a:hover{
+    background:#51a6a6;
+    color:#111426;
+}
+.menu li ul{
+    position:absolute;
+    top:25px;
+    left:0;
+    background-color:#111426;
+    display:none;
+}
+.menu li:hover ul, .menu li.over ul{
+    display:block;
+}
+.menu li ul li{
+    border:1px solid #c0c0c0;
+    display:block;
+    width:150px;
+}
+.menuOpcoes{
+    border: 1px solid #c0c0c0;
+}
+
+/**/
 
 body{
     margin-left: 0;
     margin-right: 0;
     margin-top: 70px;
     background-color: #11142616;
-    
-
 }
 
 header{
@@ -20,16 +164,19 @@ header{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid white;
+    box-shadow: 0px 5px 20px #000000;
+    z-index: 1;
 
 }
 
 header h2{
-    color: lightgrey;
+    color: #51a6a6;
     font-size: 25px;
     padding-left: 2%;
     
 }
 
+/*ajustando inicio*/
 nav{
     display: flex;
     justify-content: space-around;
@@ -44,22 +191,21 @@ nav h2{
 
 nav a{
     text-decoration: none;
-    color: lightgrey;
+    color: #51a6a6;
 }
 
 nav a:hover{
     background-color: #51a6a6;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 4px;
     color:#111426;
-    font-size:17px;
-    text-decoration: underline;
+    font-size: 15px;
     font-weight: bold;
     
 }
-
+/* ajustando fim */
 .hero{
-    background-image: linear-gradient(to right, #111426, #111426e2 );
+    background-color: #111426;
     display: flex;
     justify-content: space-around;
     align-items:center;
@@ -78,7 +224,7 @@ nav a:hover{
     box-shadow: -10px 10px 8px black;
     width: 25%;
     border-radius: 20px;
-    margin: 15% 0;
+    margin: 10% 0;
 }
 
 .apresentacao{
@@ -95,6 +241,8 @@ nav a:hover{
 #minhaDescricao{
     width: 50%;
     height: 100%;
+    color: #111426;
+    text-shadow: 0.5px 0px 0px #111426;
     background-color: #51a6a6ee;
     padding: 10px;
     border-radius: 15px;
@@ -103,6 +251,7 @@ nav a:hover{
 
 #comprimento{
     text-align: center;
+    text-shadow: 0.5px 0px 0px #51a6a6;
 }
 
 .apresentacao h2{
@@ -129,13 +278,20 @@ nav a:hover{
 }
 
 #curiosidades li{
-    background-color: #51a6a6;
+    color: lightgrey;
+    background-color: #111426;
     border-radius: 15px;
     padding: 1%;
     height: 100%;
     margin: 1%;
     display: flex;
     flex-direction: column;
+}
+
+#curiosidades img{
+    border-radius: 15px;
+    width: 400px;
+    height: 266.66px;
 }
 
 #educacao{
@@ -182,8 +338,8 @@ nav a:hover{
     background-image: url(./fotos/causos.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    max-width: 626px;
-    height: 418px;
+    max-width: 796px;
+    height: 464px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -219,13 +375,59 @@ nav a:hover{
 
 #contato a, p{
     color: #51a6a6;
+    text-decoration: none;
 }
 
 #contato a:hover{
-    background-color: #51a6a6;
-    color: #111426;
-    width: 100%;
-    padding: 1%;
-    border-radius: 30px;
+    color: #51a6a6;
+    text-decoration: underline;
 }
 /* LEMBRE-SE: Responsividade!!! */
+@media screen and (max-width: 900px) {
+    .hero{
+        flex-direction:column-reverse;
+        text-align: center;
+
+    }
+    .hero img{
+        width: 45%;
+        margin: 5% 0;
+    }
+
+    .euMaisDescricao{
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    #minhaDescricao{
+        margin-right: 0;
+        width: 75%;
+    }
+
+    #educacao table{
+        width: 75%;
+        text-align: center;
+    }
+
+    #contato a, p{
+        text-align: center;
+
+    }
+
+    nav{
+        display: none;
+    }
+
+    header{
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .menu{
+        display: none;
+    }
+    
+}
