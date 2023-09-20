@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300&display=swap');
 
-
 body{
     width: 470px;
     height: 930px;
     border: 1px solid red;
     font-family: 'Inter', sans-serif;
-    
 }
 
 .quadrado_mais{
@@ -181,8 +179,8 @@ body{
     align-items: center;
     width: 469px;
     height: 68px;
-    position: relative;
-    top: 862px;
+    position: absolute;
+    top: 870px;
     background-color: white;
     
 }
