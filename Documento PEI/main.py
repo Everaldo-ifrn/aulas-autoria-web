@@ -6,6 +6,8 @@ from reportlab.lib import styles
 elements = []
 
 class MyDocTemplate(BaseDocTemplate):
+
+    caminho_imagem2 = "D:\\Users\\20211174010034\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoEnapne.png"
     def __init__(self, filename, **kwargs):
         super().__init__(filename, **kwargs)
         main_frame = Frame(self.leftMargin, self.bottomMargin, self.width, self.height - 100)
@@ -20,7 +22,8 @@ class MyDocTemplate(BaseDocTemplate):
         # Definir a posição inicial para desenhar o texto
         y_position = doc.height + doc.topMargin
 
-        caminho_imagem = "imagens/logoRepublica.png"
+        caminho_imagem = "D:\\Users\\20211174010034\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoRepublica.png"
+        #caminho_imagem = "imagens/logoRepublica.png"
         imagem = Image(caminho_imagem, width=50, height=50)
 
         # Calcular a posição horizontal para centralizar a imagem
@@ -56,8 +59,9 @@ class MyDocTemplate(BaseDocTemplate):
         footer = Paragraph(footer_text, style=footer_style)
         footer.wrapOn(canvas, doc.width, doc.bottomMargin)
         footer.drawOn(canvas, doc.leftMargin, footer.height)
-        
-        """data = [['Coluna 1', 'Coluna 2', 'Coluna 3'],
+
+        """
+        data = [['Coluna 1', 'Coluna 2', 'Coluna 3'],
                 ['Dado 1.1', 'Dado 1.2', 'Dado 1.3'],
                 ['Dado 2.1', 'Dado 2.2', 'Dado 2.3']]
 
@@ -74,13 +78,15 @@ class MyDocTemplate(BaseDocTemplate):
         table = Table(data)
         table.setStyle(table_style)
         # Adicionar a tabela aos elementos
-        elements.append(table)"""
+        elements.append(table)
+        """
 
 def create_pdf():
     doc = MyDocTemplate("exemplo.pdf", pagesize=letter)
 
     # Adicionar imagem centralizada sobre o título "ANEXO I"
-    caminho_imagem_titulo = "imagens/logoEnapne.png"
+    caminho_imagem_titulo = "D:\\Users\\20211174010034\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoEnapne.png"
+    #caminho_imagem_titulo = "imagens/logoEnapne.png"
     imagem_titulo = Image(caminho_imagem_titulo, width=95, height=80)
     # Calcular a posição horizontal para centralizar a imagem
     x_position_imagem = (doc.width - imagem_titulo.drawWidth) / 2
@@ -106,11 +112,12 @@ def create_pdf():
     table_style = TableStyle([('BACKGROUND', (0, 0), (-1, 0), 'white'),
                               ('TEXTCOLOR', (0, 0), (-1, 0), 'black'),
                               ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
-                              ('FONTNAME', (0, 0), (-1, 0), 'Helvetica'),
-                              ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+                              ('FONTNAME', (0, 0), (-1, 0), 'Helvetica'),                              
                               ('BACKGROUND', (0, 1), (-1, -1), 'white'),
                               ('GRID', (0, 0), (-1, -1), 1, 'black'),
-                              ('WORDWRAP', (0, 0), (-1, -1), True)])
+                              ('WORDWRAP', (0, 0), (-1, 0), True),
+                              ('TRUNCATE', (0, 0), (-1, 0), 'END'),
+                              ('VALIGN', (0, 0), (-1, -1), 'MIDDLE')])
 
     # Defina a largura da tabela como 80% da largura da página
     table_width = doc.width                          
@@ -121,9 +128,9 @@ def create_pdf():
     elements.append(space)
 
     ############################################################
-    data2 = [['HISTÓRICO PESSOAL E ESCOLAR DO (A) ESTUDANTE</b>'],
+    data2 = [['HISTÓRICO PESSOAL E ESCOLAR DO (A) ESTUDANTE'],
             [' '],
-            ['<b>Necessidades Educacionais Específicas</b>'],
+            ['Necessidades Educacionais Específicas'],
             [' '],
             ['Conhecimentos, Habilidades, Capacidades, Interesses, Necessidades (O que sabe? Do que gosta/afinidades?...) '],
             [' ']]
