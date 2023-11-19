@@ -6,8 +6,8 @@ from reportlab.lib import styles
 elements = []
 
 class MyDocTemplate(BaseDocTemplate):
-
-    caminho_imagem2 = "D:\\Users\\20211174010034\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoEnapne.png"
+    caminho_imaem2 = "C:\\Users\\Rafael\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoEnapne.png"
+    #caminho_imagem2 = "imagens/logoEnapne.png"
     def __init__(self, filename, **kwargs):
         super().__init__(filename, **kwargs)
         main_frame = Frame(self.leftMargin, self.bottomMargin, self.width, self.height - 100)
@@ -22,7 +22,7 @@ class MyDocTemplate(BaseDocTemplate):
         # Definir a posição inicial para desenhar o texto
         y_position = doc.height + doc.topMargin
 
-        caminho_imagem = "D:\\Users\\20211174010034\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoRepublica.png"
+        caminho_imagem = "C:\\Users\\Rafael\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoRepublica.png"
         #caminho_imagem = "imagens/logoRepublica.png"
         imagem = Image(caminho_imagem, width=50, height=50)
 
@@ -60,32 +60,12 @@ class MyDocTemplate(BaseDocTemplate):
         footer.wrapOn(canvas, doc.width, doc.bottomMargin)
         footer.drawOn(canvas, doc.leftMargin, footer.height)
 
-        """
-        data = [['Coluna 1', 'Coluna 2', 'Coluna 3'],
-                ['Dado 1.1', 'Dado 1.2', 'Dado 1.3'],
-                ['Dado 2.1', 'Dado 2.2', 'Dado 2.3']]
 
-
-        # Configuração da tabela
-        table_style = TableStyle([('BACKGROUND', (0, 0), (-1, 0), 'grey'),
-                                  ('TEXTCOLOR', (0, 0), (-1, 0), 'white'),
-                                  ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-                                  ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-                                  ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
-                                  ('BACKGROUND', (0, 1), (-1, -1), 'white'),
-                                  ('GRID', (0, 0), (-1, -1), 1, 'black')])
-        # Criar a tabela e aplicar o estilo
-        table = Table(data)
-        table.setStyle(table_style)
-        # Adicionar a tabela aos elementos
-        elements.append(table)
-        """
-
-def create_pdf():
-    doc = MyDocTemplate("exemplo.pdf", pagesize=letter)
-
+def create_anexoI():
+    doc = MyDocTemplate("PEI_FIM.pdf", pagesize=letter)
+    
     # Adicionar imagem centralizada sobre o título "ANEXO I"
-    caminho_imagem_titulo = "D:\\Users\\20211174010034\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoEnapne.png"
+    caminho_imagem_titulo = "C:\\Users\\Rafael\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoEnapne.png"
     #caminho_imagem_titulo = "imagens/logoEnapne.png"
     imagem_titulo = Image(caminho_imagem_titulo, width=95, height=80)
     # Calcular a posição horizontal para centralizar a imagem
@@ -103,11 +83,11 @@ def create_pdf():
     text = Paragraph("<b><u>Alerta Ético</u></b>: as informações contidas neste documento são consideradas reservadas e o compartilhamento das mesmas deve ser restrito apenas às/aos envolvidos na ação pedagógica, sob pena de implicações legais. <br/><br/>", text_style)
     elements.append(text)
 
-    data = [['Nível de Ensino/ Forma: (   ) Técnico Integrado Regular  (  ) Técnico Integrado EJA   ( )Técnico Subsequente   (  ) Curso Superior de Tecnologia  (  ) Curso Superior de Licenciatura ( ) Engenharia  (  ) Pós-Graduação  ( ) Outros _________________________ '],
-                ['Nome do Estudante: '],
-                ['Curso: '],
-                ['Necessidades Educacionais Específicas: '],
-                ['Equipe multiprofissional responsável:']]
+    data = [[Paragraph('Nível de Ensino/ Forma: (   ) Técnico Integrado Regular  (  ) Técnico Integrado EJA   ( )Técnico Subsequente   (  ) Curso Superior de Tecnologia  (  ) Curso Superior de Licenciatura ( ) Engenharia  (  ) Pós-Graduação  ( ) Outros _________________________ ', None)],
+                [Paragraph('Nome do Estudante: ', None)],
+                [Paragraph('Curso: ', None)],
+                [Paragraph('Necessidades Educacionais Específicas: ', None)],
+                [Paragraph('Equipe multiprofissional responsável: ', None)]]
 
     table_style = TableStyle([('BACKGROUND', (0, 0), (-1, 0), 'white'),
                               ('TEXTCOLOR', (0, 0), (-1, 0), 'black'),
@@ -128,17 +108,150 @@ def create_pdf():
     elements.append(space)
 
     ############################################################
-    data2 = [['HISTÓRICO PESSOAL E ESCOLAR DO (A) ESTUDANTE'],
+    # Estilo para o texto em negrito
+    style_bold = getSampleStyleSheet()["BodyText"]
+    style_bold.alignment = 1
+
+    style_bold2 = getSampleStyleSheet()["BodyText"]
+    style_bold2.alignment = 0
+    
+    data2 = [[Paragraph('<b>HISTÓRICO PESSOAL E ESCOLAR DO (A) ESTUDANTE</b>', style_bold)],
             [' '],
-            ['Necessidades Educacionais Específicas'],
+            [Paragraph('<b>Necessidades Educacionais Específicas</b>', style_bold)],
             [' '],
-            ['Conhecimentos, Habilidades, Capacidades, Interesses, Necessidades (O que sabe? Do que gosta/afinidades?...) '],
-            [' ']]
+            [Paragraph('<b>Conhecimentos, Habilidades, Capacidades, Interesses, Necessidades (O que sabe? Do que gosta/afinidades?...)</b> &lt;Preenchido, preferencialmente, pela ETEP, COAS e NAPNE&gt;', style_bold), Paragraph('<b>Dificuldades apresentadas</b> &lt;Preenchido, preferencialmente, pela ETEP, COAS e NAPNE&gt;', style_bold)],
+            [' ', ' '],
+            [Paragraph('<b>OBSERVAÇÕES 	GERAIS  SOBRE 	OUTRAS  NECESSIDADES  EDUCACIONAIS ESPECÍFICAS 	DO (A) ESTUDANTE:</b> ', style_bold2)]]
+    
+    table_style2 = TableStyle([('BACKGROUND', (0, 0), (-1, 0), 'white'),
+                              ('TEXTCOLOR', (0, 0), (-1, 0), 'black'),
+                              ('ALIGN', (0, 0), (0, 0), 'CENTER'),
+                              ('ALIGN', (0, 2), (0, 2), 'CENTER'),
+                              ('ALIGN', (0, 4), (1, 4), 'CENTER'),
+                              ('FONTNAME', (0, 0), (-1, 0), 'Helvetica'),                              
+                              ('BACKGROUND', (0, 0), (0, 0), '#D3D3D3'),
+                              ('BACKGROUND', (0, 2), (0, 2), '#D3D3D3'),
+                              ('BACKGROUND', (0, 4), (1, 4), '#D3D3D3'),
+                              ('GRID', (0, 0), (-1, -1), 1, 'black'),
+                              ('WORDWRAP', (0, 0), (-1, 0), True),
+                              ('TRUNCATE', (0, 0), (-1, 0), 'END'),
+                              ('VALIGN', (0, 0), (-1, -1), 'MIDDLE')])
                               
     # Defina a largura da tabela como 80% da largura da página
-    table2_width = doc.width                          
-    table2 = Table(data2, style=table_style, colWidths=[table2_width])
+    table2_width = doc.width * 0.5 
+    table2 = Table(data2, style=table_style2, colWidths=[table2_width])
+    table2.setStyle(TableStyle([
+        ('SPAN', (0, 0), (1, 0)),
+        ('SPAN', (0, 1), (1, 1)),
+        ('SPAN', (0, 2), (1, 2)),
+        ('SPAN', (0, 3), (1, 3)),
+        ('SPAN', (0, 6), (1, 6))
+    ]))
     elements.append(table2)
+    
+    anexoII = Paragraph('ANEXO II', style=title_style)
+    anexoII_texto = Paragraph('REGISTRO DO ACOMPANHAMENTO DO PEI E PARECER DA EQUIPE', style=title_style)
+    elements.append(anexoII)
+    elements.append(anexoII_texto)
+
+    data4 = [
+        [Paragraph('Descrever avanços do/a estudante durante o acompanhamento de elaboração e execução do PEI.',None)],
+        [Paragraph('PARECER DA EQUIPE MULTIPROFISSIONAL',None)],
+        [Paragraph(' ',None)]
+    ]
+    table_style4 = TableStyle([  
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('GRID', (0, 0), (-1, -1), 1, 'black')  
+    ])
+    table4 = Table(data4)
+    table4.setStyle(table_style4)
+    elements.append(table4)
     doc.build(elements)
 
-create_pdf()
+"""def create_anexoII(doc):
+    text_style = getSampleStyleSheet()["BodyText"] # CONTEÚDO AQUI!!!
+    text = Paragraph("<b><u>Alerta Ético</u></b>: as informações contidas neste documento são consideradas reservadas e o compartilhamento das mesmas deve ser restrito apenas às/aos envolvidos na ação pedagógica, sob pena de implicações legais. <br/><br/>", text_style)
+    elements.append(text)
+
+    data = [[Paragraph('Nível de Ensino/ Forma: (   ) Técnico Integrado Regular  (  ) Técnico Integrado EJA   ( )Técnico Subsequente   (  ) Curso Superior de Tecnologia  (  ) Curso Superior de Licenciatura ( ) Engenharia  (  ) Pós-Graduação  ( ) Outros _________________________ ', None)],
+                [Paragraph('Nome do Estudante: ', None)],
+                [Paragraph('Curso: ', None)],
+                [Paragraph('Necessidades Educacionais Específicas: ', None)],
+                [Paragraph('Equipe multiprofissional responsável: ', None)]]
+
+    table_style = TableStyle([('BACKGROUND', (0, 0), (-1, 0), 'white'),
+                              ('TEXTCOLOR', (0, 0), (-1, 0), 'black'),
+                              ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                              ('FONTNAME', (0, 0), (-1, 0), 'Helvetica'),                              
+                              ('BACKGROUND', (0, 1), (-1, -1), 'white'),
+                              ('GRID', (0, 0), (-1, -1), 1, 'black'),
+                              ('WORDWRAP', (0, 0), (-1, 0), True),
+                              ('TRUNCATE', (0, 0), (-1, 0), 'END'),
+                              ('VALIGN', (0, 0), (-1, -1), 'MIDDLE')])
+
+    # Defina a largura da tabela como 80% da largura da página
+    table_width = doc.width                          
+    table = Table(data, style=table_style, colWidths=[table_width])
+    elements.append(table)
+
+    space = Spacer(1, 12)  # Espaço vertical de 12 unidades
+    elements.append(space)"""
+
+
+
+    
+create_anexoI()
+#create_anexoII(doc)
+
+
+
+
+
+
+
+# --------------- ANOTAÇÕES ------------------
+"""
+    #TESTE DA COLUNAAS!!!!!!!!!!!!!!!!!!!!! 
+    # Lista de dados para a tabela
+    data3 = [
+        ['Coluna 1'],  # Primeira linha com uma coluna
+        ['Dado 1.1', 'Dado 1.2']  # Segunda linha com duas colunas
+    ]
+
+    # Estilo da tabela
+    table_style3 = TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), 'grey'),  # Cor de fundo para a primeira linha
+        ('TEXTCOLOR', (0, 0), (-1, 0), 'white'),  # Cor do texto para a primeira linha
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),  # Alinhamento central para toda a tabela
+        ('GRID', (0, 0), (-1, -1), 1, 'black')  # Grade para todas as células da tabela
+    ])
+
+    # Criar a tabela e aplicar o estilo
+    table3 = Table(data3)
+    table3.setStyle(table_style3)
+    # Mesclar células para criar uma única coluna na primeira linha
+    table3.setStyle(TableStyle([('SPAN', (0, 0), (1, 0))]))
+
+    # Adicionar a tabela aos elementos
+    elements.append(table3)"""
+
+"""
+        data = [['Coluna 1', 'Coluna 2', 'Coluna 3'],
+                ['Dado 1.1', 'Dado 1.2', 'Dado 1.3'],
+                ['Dado 2.1', 'Dado 2.2', 'Dado 2.3']]
+
+
+        # Configuração da tabela
+        table_style = TableStyle([('BACKGROUND', (0, 0), (-1, 0), 'grey'),
+                                  ('TEXTCOLOR', (0, 0), (-1, 0), 'white'),
+                                  ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+                                  ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                                  ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+                                  ('BACKGROUND', (0, 1), (-1, -1), 'white'),
+                                  ('GRID', (0, 0), (-1, -1), 1, 'black')])
+        # Criar a tabela e aplicar o estilo
+        table = Table(data)
+        table.setStyle(table_style)
+        # Adicionar a tabela aos elementos
+        elements.append(table)
+        """
