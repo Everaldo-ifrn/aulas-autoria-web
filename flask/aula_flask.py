@@ -1,4 +1,4 @@
-from flask import Flask #importação do Flask
+ from flask import Flask #importação do Flask
 
 app = Flask(__name__) #instância do Flask
 

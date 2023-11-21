@@ -3,10 +3,14 @@ from reportlab.platypus import BaseDocTemplate, Paragraph, Frame, PageTemplate, 
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import styles
 from reportlab.lib.enums import TA_LEFT
+import flaskPei
 
 elements = []
 
-class MyDocTemplate(BaseDocTemplate):
+print(flaskPei.pegando_info())
+
+"""
+class MyDocTemplate(BaseDocTemplate): #Classe para poder cria ua estrutura do pdf
     caminho_imaem2 = "C:\\Users\\Rafael\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoEnapne.png"
     #caminho_imagem2 = "imagens/logoEnapne.png"
     def __init__(self, filename, **kwargs):
@@ -19,7 +23,7 @@ class MyDocTemplate(BaseDocTemplate):
         self.add_header(canvas, doc)
         self.add_footer(canvas, doc)
 
-    def add_header(self, canvas, doc):
+    def add_header(self, canvas, doc): #Construção do cabeçalho do pdf
         y_position = doc.height + doc.topMargin - 50
         caminho_imagem = "C:\\Users\\Rafael\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoRepublica.png"
         #caminho_imagem = "imagens/logoRepublica.png"
@@ -47,7 +51,7 @@ class MyDocTemplate(BaseDocTemplate):
         y_position -= title_height
         title.drawOn(canvas, doc.leftMargin, y_position)
 
-    def add_footer(self, canvas, doc):
+    def add_footer(self, canvas, doc): #Construção do rodapé do pdf
         footer_text = "Esta Instrução Normativa foi elaborada com base na Instrução Normativa nº 12/12/2018 do IFRS."
         footer_style = styles.getSampleStyleSheet()['BodyText']
         footer = Paragraph(footer_text, style=footer_style)
@@ -55,7 +59,7 @@ class MyDocTemplate(BaseDocTemplate):
         footer.drawOn(canvas, doc.leftMargin, footer.height)
 
 
-def create_anexoI():
+def create_pei(): #Criação do PEI
     doc = MyDocTemplate("PEI_PessoaX.pdf", pagesize=letter, title="PEI_PessoaX")
 
     # -------------------- ANEXO I ------------------------
@@ -182,7 +186,7 @@ def create_anexoI():
       [Paragraph('<b>Avaliações</b>', text_style)],
       [Paragraph('Quais instrumentos utilizados? Como foram aplicados? Recomenda-se oportunizar diversas formas de expressão da aprendizagem. Exemplos: projetos educacionais (ensino, pesquisa, extensão), atividades diferenciadas (seminários, debates, provas individuais e/ou em duplas), observando o nível de desempenho e contribuição do/a estudante no desenvolvimento do componente curricular.', None), ' '],
       [Paragraph('<b>Registro do desenvolvimento e acompanhamento processual do PEI pelo professor </b>', text_style)],
-      [Paragraph("""Descrever avanços do(a) estudante, considerando os objetivos previstos para ele(a) e a superação das dificuldades. Procurar mencionar as propostas que tiveram êxito e o replanejamento daquelas que não tiveram e o que se observou em ambos os casos. Pontuar o que pretende para a próxima etapa, em termos de objetivos específicos de atuação junto à/ao estudante. Também destacar aspectos do seu desenvolvimento social. Mencionar, caso o/a estudante tenha acompanhado a turma realizando as mesmas atividades propostas para os demais, sem necessidade de adaptação. 
+      [Paragraph(""""""Descrever avanços do(a) estudante, considerando os objetivos previstos para ele(a) e a superação das dificuldades. Procurar mencionar as propostas que tiveram êxito e o replanejamento daquelas que não tiveram e o que se observou em ambos os casos. Pontuar o que pretende para a próxima etapa, em termos de objetivos específicos de atuação junto à/ao estudante. Também destacar aspectos do seu desenvolvimento social. Mencionar, caso o/a estudante tenha acompanhado a turma realizando as mesmas atividades propostas para os demais, sem necessidade de adaptação. 
 <br/> &bull;	Compreende e participa das atividades propostas no ambiente acadêmico? 
 <br/> &bull;	Apresenta desenvolvimento satisfatório no cumprimento das atividades? (baseado nos objetivos propostos) 
 <br/> &bull;	Apresenta motivação para a realização das atividades? 
@@ -193,7 +197,7 @@ def create_anexoI():
 <br/> &bull;	É assíduo? 	 
 <br/> &bull;	Tem cuidado e organização com o material escolar? 
 <br/> &bull;	Apresenta facilidade para aprender/resolver problemas? 
-""", None)]
+"""""", None)]
     ]
     table_styleII = TableStyle([('BACKGROUND', (0, 0), (1, 1), '#D3D3D3'),
                               ('BACKGROUND', (0, 3), (0, 3), '#EAD1DC'),
@@ -276,7 +280,7 @@ def create_anexoI():
 
     dadosV = [[Paragraph('<b>EQUIPE RESPONSÁVEL</b>', style_bold)],
         [Paragraph('<b>COORDENAÇÃO DE CURSO: </b> ', style_bold2)],
-        [Paragraph("""<b>EQUIPE NÚCLEO DE APOIO À PESSOAS COM NECESSIDADES ESPECÍFICAS</b> <br/> &bull; """, style_bold2)]
+        [Paragraph("<b>EQUIPE NÚCLEO DE APOIO À PESSOAS COM NECESSIDADES ESPECÍFICAS</b> <br/> &bull; ", style_bold2)]
     ]
     table_styleV = TableStyle([('TEXTCOLOR', (0, 0), (-1, 0), 'black'),
                               ('FONTNAME', (0, 0), (-1, 0), 'Helvetica'),
@@ -293,4 +297,4 @@ def create_anexoI():
 
     doc.build(elements)
   
-create_anexoI()
+create_pei()"""
