@@ -2,12 +2,12 @@
 -- 1. Curso
 -- 2. Aluno
 -- 3. Pei
--- 4. Anexo 2
--- 5. Anexo 3
--- 6. Acompanhamento
--- 7. equipeNapne
--- 8. anexo1
--- 9. 
+-- 4. equipeMultiDisciplinar
+-- 5. Anexo 2
+-- 6. Anexo 3
+-- 7. Acompanhamento
+-- 8. equipeNapne
+-- 9. anexo1 
 
 USE enapne;
 

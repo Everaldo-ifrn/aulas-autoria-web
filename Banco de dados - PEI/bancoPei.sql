@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS `enapne`.`aluno` (
   `codigoCurso` VARCHAR(6) NOT NULL,
   `necessidadesEspecificas` VARCHAR(100) NULL,
   PRIMARY KEY (`matricula`),
+  
   INDEX `fk_pertence_idx` (`codigoCurso` ASC) VISIBLE,
   CONSTRAINT `fk_pertence`
     FOREIGN KEY (`codigoCurso`)

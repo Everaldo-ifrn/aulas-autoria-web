@@ -3,16 +3,20 @@ from reportlab.platypus import BaseDocTemplate, Paragraph, Frame, PageTemplate, 
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import styles
 from reportlab.lib.enums import TA_LEFT
-import flaskPei
+
 
 elements = []
 
-print(flaskPei.pegando_info())
+import os
+
+diretorio_atual = os.getcwd()
+print("Diretório atual:", diretorio_atual)
+
 
 """
-class MyDocTemplate(BaseDocTemplate): #Classe para poder cria ua estrutura do pdf
-    caminho_imaem2 = "C:\\Users\\Rafael\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoEnapne.png"
-    #caminho_imagem2 = "imagens/logoEnapne.png"
+class MyDocTemplate(BaseDocTemplate): #Classe para poder cria uma estrutura do pdf
+    #caminho_imaem2 = "C:\\Users\\Rafael\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoEnapne.png"
+    caminho_imagem2 = "imagens/logoEnapne.png"
     def __init__(self, filename, **kwargs):
         super().__init__(filename, **kwargs)
         main_frame = Frame(self.leftMargin, self.bottomMargin, self.width, self.height - 100)
@@ -25,8 +29,8 @@ class MyDocTemplate(BaseDocTemplate): #Classe para poder cria ua estrutura do pd
 
     def add_header(self, canvas, doc): #Construção do cabeçalho do pdf
         y_position = doc.height + doc.topMargin - 50
-        caminho_imagem = "C:\\Users\\Rafael\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoRepublica.png"
-        #caminho_imagem = "imagens/logoRepublica.png"
+        #caminho_imagem = "C:\\Users\\Rafael\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoRepublica.png"
+        caminho_imagem = "imagens/logoRepublica.png"
         imagem = Image(caminho_imagem, width=50, height=50)
 
         x_position = (doc.width + 95) / 2
@@ -63,8 +67,8 @@ def create_pei(): #Criação do PEI
     doc = MyDocTemplate("PEI_PessoaX.pdf", pagesize=letter, title="PEI_PessoaX")
 
     # -------------------- ANEXO I ------------------------
-    caminho_imagem_titulo = "C:\\Users\\Rafael\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoEnapne.png"
-    #caminho_imagem_titulo = "imagens/logoEnapne.png"
+    #caminho_imagem_titulo = "C:\\Users\\Rafael\\Documents\\GitHub\\aulas-autoria-web\\Documento PEI\\imagens\\logoEnapne.png"
+    caminho_imagem_titulo = "imagens/logoEnapne.png"
     imagem_titulo = Image(caminho_imagem_titulo, width=95, height=80)
     x_position_imagem = (doc.width - imagem_titulo.drawWidth) / 2
     elements.append(imagem_titulo)
