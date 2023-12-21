@@ -1,0 +1,31 @@
+/* 
+Paleta de cores:
+- #D8A9D9 roxo escuro
+- #F2E9F2 cinza
+- #EACEF2 roxo claro
+- #F9A8C8 rosa claro
+- #E55E82 rosa escuro
+*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteiner{
+    display: flex;
+}
+
+.titulo{
+    background: linear-gradient(to bottom, #EACEF2, #F8ABCC);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Merriweather Sans', sans-serif;
+
+}
+
+p{
+
+    font-family: 'Red Hat Display', sans-serif;
+}

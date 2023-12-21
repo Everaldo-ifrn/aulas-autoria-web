@@ -1,0 +1,35 @@
+.carousel {
+    position: relative;
+    max-width: 600px; /* Ajuste o tamanho conforme necessário */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.carousel-images img {
+    width: 100%;
+    height: auto;
+}
+  
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+  
+.prev, .next {
+    font-size: 24px;
+    cursor: pointer;
+}
+  
+.prev:hover, .next:hover {
+    color: gray; /* Cor quando hover */
+}
+  
