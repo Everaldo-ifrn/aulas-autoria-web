@@ -13,6 +13,10 @@ main{
     align-items: center;
 }
 
+body{
+    margin: 0;
+}
+
 .conteiner{
     display: flex;
 }
@@ -29,3 +33,39 @@ p{
 
     font-family: 'Red Hat Display', sans-serif;
 }
+
+.carrinho_produto{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.botaoCarrinho{
+    background-color: #F9A8C8;
+    color: #E55E82;
+    border-radius: 50px;
+    padding: 10px 50%;
+}
+
+.botaoCompra{
+    background-color: #E55E82;
+    color: #F9A8C8;
+    border-radius: 50px;
+    padding: 10px 50%;
+    text-decoration: none;
+}
+
+.informacoes{
+    border: 1px solid #E55E82;
+    border-radius: 20px;
+    padding: 5px 30px;
+    width: 80%;
+}
+
+footer{
+    background-color: #E55E82;
+    color: white;
+    width: 100%;
+    margin-top: 10%;
+}
+
