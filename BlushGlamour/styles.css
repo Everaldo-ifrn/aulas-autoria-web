@@ -1,0 +1,314 @@
+/* 
+Paleta de cores:
+- #D8A9D9 roxo escuro
+- #F2E9F2 cinza
+- #EACEF2 roxo claro
+- #F9A8C8 rosa claro
+- #E55E82 rosa escuro
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: RedHatDisplay;
+    
+}
+
+@font-face {
+    font-family: RedHatDisplay;
+    src: url('RedHatDisplay/RedHatDisplay-VariableFont_wght.ttf');
+}
+
+/*Aqui irei modelar a barra lateral*/
+#barra-lateral {
+    width: 350px;
+    height: 1024px;
+    position: fixed;
+    top: 0;
+    left: -350px; /* Inicialmente, a barra lateral está fora da tela */
+    background-color: #ffffff;
+    color: #000000;
+    transition: left 0.3s ease; /* Adiciona uma transição suave para a animação */
+    display: flex;
+    flex-direction: column;
+}
+/*Aqui estou modelando a parte do perfil do usuario*/
+.DadosPerfil {
+    display: flex;
+    background-color:rgba(229, 94, 130, 1);
+    height: 120px;
+    width: 350px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.DadosPerfil > p {
+    margin-left: 20px;
+    color: white;
+    font-size: 20px;
+}
+.DadosPerfil > a {
+    margin-left: 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.DadosPerfil > div > img {
+    border-radius: 100%;
+    margin-left: 20px;
+    border: 2px solid white;
+    
+}
+/*Aqui estou modelando a parte dos links*/
+.conteuldoBarralateral > h1 {
+    background: linear-gradient(to bottom, #EACEF2,#F9A8C8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    margin-left: 5px;
+}
+.conteuldoBarralateral > div {
+    width: 350px;
+    border-bottom: 1px solid rgba(236, 202, 237, 1);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.conteuldoBarralateral > div > a {
+    text-decoration: none;
+    color: #000000;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.conteuldoBarralateral > div > i {
+    color: rgba(229, 94, 130, 1);
+    margin-bottom: 10px;
+}
+.conteuldoBarralateral > div > a:hover {
+    color: rgba(229, 94, 130, 1);
+    transition-duration: 0.5s;
+}
+
+/*Botao de abrir a barra lateral*/
+#toggle-btn {
+    background-color: #d676ae;
+    height: 20px;
+    width: 40px;
+    border: none;
+    border-radius: 30px;
+}
+/*Botao de fechar barra lateral*/
+.botaSair {
+    background-color: rgba(229, 94, 130, 1);
+    width: 350px;
+    display: flex;
+    justify-content: end;
+}
+.botaSair > a {
+    padding: 5px;
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 20px;
+   
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    height: 120px;
+    flex-shrink: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.pesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    height: 40px;
+    flex-shrink: 0;
+    border: 1px solid #AEAEAE;
+    border-radius: 30px;
+}
+
+.pesquisa > input{
+    border: 0px;
+    background-color: white;
+}
+
+.pesquisa > a > i{
+    color: #E55E82;
+}
+
+.icone_carrinho{
+    color: #E55E82;
+}
+
+.conteiner_pesquisa{
+    display: flex;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    width: 1440px;
+}
+
+.produto_mais_informacao{
+    width: 1300px;
+    height: 890px;
+}
+
+.produto{
+    width: 1200px;
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.informacao_produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 520px;
+    height: 500px;
+
+    padding: 20px;
+}
+
+.informacao_produto > div >  h2{
+    font-family: Merriweather Sans;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: linear-gradient(180deg, #EACEF2 0%, #F8ABCC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.descricao_produto > h2{
+    font-family: Merriweather Sans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: linear-gradient(180deg, #EACEF2 0%, #F8ABCC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+
+.informacao_produto > div > p, .quantidade_produto {
+    color: #000;
+    font-family: Red Hat Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#preco{
+    color: #000;
+    font-family: Red Hat Display;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.carrinho_mais_compra{
+    display: flex;
+    width: 528px;   
+    justify-content: space-between;
+}
+
+.carrinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9A8C8; /* Substitua pela cor desejada para o background */
+    border-radius: 50px;
+    width: 250px;
+    height: 60px;
+    color: #E55E82;
+    text-decoration: none;
+}
+
+.compra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E55E82; /* Substitua pela cor desejada para o background */
+    border-radius: 50px;
+    width: 200px;
+    height: 60px;
+    color: #F9A8C8;
+    text-decoration: none;
+    font-family: Red Hat Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.quantidade_produto{
+    display: flex;
+    justify-content: space-between;
+    width: 245px;
+    
+}
+
+.quantidade_mais_carrinho{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 147px;
+    width: 478px;
+}
+
+.descricao_produto{
+    width: 1202px;
+    height: 250px;
+    border-radius: 20px;
+    border: 1px solid #E55E82;
+    padding: 16px 44px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1440px;
+    height: 400px;
+    background: #E55E82; 
+}
+
+.icones_rodape{
+    display: flex;
+    width: 208px;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+.icones_rodape > a{
+    font-size: 50px;
+    color: white;
+}
