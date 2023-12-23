@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Importante para o dimensionamento correto */
+}
+
+html{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #ECCAED 0%, #F9A8C8 100%);
+}
+
+.informacoes{
+    width: 100%;
+    max-width: 1100px;
+    height: 750px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: RedHatDisplay;
+    margin: 0 auto;
+
+}
+
+
+body{
+    width: 100%;
+    max-width: 1440px;
+
+    
+}
+

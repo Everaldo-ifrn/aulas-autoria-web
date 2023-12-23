@@ -1,3 +1,4 @@
+/* Seu CSS atual */
 /* 
 Paleta de cores:
 - #D8A9D9 roxo escuro
@@ -294,21 +295,27 @@ main{
 }
 
 .produto{
-    width: 1200px;
-    height: 550px;
+    max-width: 1200px;
+    max-height: 550px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid green;
+
+}
+
+.produto > img{
+    max-width: 450px;
+    min-width: 303px;
+    max-height: 450px;
+    min-height: 315px;
 }
 
 .informacao_produto{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 520px;
-    height: 500px;
-
+    max-width: 520px;
+    max-height: 500px;
     padding: 20px;
 }
 
@@ -335,10 +342,16 @@ main{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 15px;
+    max-width: 1030px;
+    min-width: 390px;
 }
 
+.descricao_produto > p{
+    max-width: 1030px;
+    min-width: 390px;
+}
 
-.informacao_produto > div > p, .quantidade_produto {
+.informacao_produto > div > p, .informacao_produto > p, .quantidade_produto {
     color: #000;
     font-family: Red Hat Display;
     font-size: 20px;
@@ -362,7 +375,7 @@ main{
     max-width: 528px;   
     justify-content: space-between;
     flex-wrap: wrap;
-    border: 1px yellow solid;
+
 }
 
 .carrinho{
@@ -399,19 +412,28 @@ main{
 
 .quantidade_produto{
     display: flex;
-    justify-content: space-between;
-    width: 245px;
-    
+    justify-content: space-around;
+    max-width: 300px;
+    min-width: 250px;
+    align-items: center;
+}
+
+.quantidade_produto > input{
+    width: 130px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #AEAEAE;
 }
 
 .quantidade_mais_carrinho{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: end;
     height: 147px;
-    width: 100%;
-    max-width: 478px;
-    border: 1px red solid;
+    max-width: 300px;
+    min-width: 250px;
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -434,9 +456,7 @@ main{
         padding: 20px 0;
     }
 
-    h2 {
-        order: -1; /* Adicionando para mover o título para cima da imagem */
-    }
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -447,14 +467,14 @@ main{
 }
 
 .descricao_produto{
-    width: 100%;
     max-width: 1200px;
-    height: 250px;
+    min-width: 390px;
+    height: auto;
     border-radius: 20px;
     border: 1px solid #E55E82;
     padding: 16px 44px;
     margin-bottom: 117px;
-    box-sizing: border-box;
+    
 }
 
 footer{
@@ -466,14 +486,93 @@ footer{
     background: #E55E82; 
 }
 
+footer > img{
+    min-width: 150px;
+    max-width: 200px;
+    min-height: 125px;
+    max-height: 200px;
+}
+
 .icones_rodape{
     display: flex;
-    width: 208px;
-    justify-content: space-between;
-    margin-right: 100px;
+    width: 100%;
+    justify-content:end;
+    margin-right: 5%;
 }
 
 .icones_rodape > a{
     font-size: 50px;
     color: white;
+    margin-left: 29px;
+}
+
+/* Novos estilos para tornar os elementos responsivos */
+.produto_mais_informacao {
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.produto {
+    width: 1200px;
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.informacao_produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 520px;
+    height: 500px;
+    padding: 20px;
+}
+  
+.informacao_produto > h2 {
+    font-family: Merriweather Sans;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: linear-gradient(180deg, #EACEF2 0%, #F8ABCC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+  /* Outros estilos existentes... */
+  
+  /* Ajustes para responsividade */
+@media screen and (max-width: 768px) {
+    
+    .produto img {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .quantidade_mais_carrinho,
+    .carrinho_mais_compra {
+      width: 100%; /* Garante que ocupem toda a largura disponível */
+      max-width: unset; /* Remove a largura máxima para se ajustar à tela */
+    }
+  
+    .carrinho_mais_compra {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      height: auto; /* Permite altura dinâmica */
+    }
+
+    .carrinho, .compra{
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 13px;
+    }
 }
