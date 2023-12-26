@@ -1,13 +1,3 @@
-/* Seu CSS atual */
-/* 
-Paleta de cores:
-- #D8A9D9 roxo escuro
-- #F2E9F2 cinza
-- #EACEF2 roxo claro
-- #F9A8C8 rosa claro
-- #E55E82 rosa escuro
-*/
-
 * {
     padding: 0;
     margin: 0;
@@ -16,8 +6,7 @@ Paleta de cores:
 
 body {
     font-family: RedHatDisplay;
-    
-    margin: 0 auto; /* Isso centraliza o conteúdo na página */
+    margin: 0 auto; 
     padding: 0;
     overflow-x: hidden; /* Evitar a barra de rolagem horizontal */
 }
@@ -224,15 +213,6 @@ header {
     margin-right: 30px;
  }
 
-
-
-
-
-
-
-
-
-
  /*AQUI IREI MODELAR AS MEDIAS QUERIES*/
  @media only screen and (max-width: 800px){
     /*Aqui irei modelar o header*/
@@ -263,8 +243,6 @@ header {
     }
  }
 
-
-
  /*para telas mobiles*/
  @media only screen and (max-width: 500px){
     /*aqui estou modelando o carrinho e a barra de pesquisa*/
@@ -288,7 +266,7 @@ main{
 .produto_mais_informacao{
     width: 100%;
     max-width: 1300px; /* Define uma largura máxima para evitar excessos */
-    padding: 0 20px; /* Adiciona algum espaço lateral */
+    padding: 0 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -384,7 +362,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F9A8C8; /* Substitua pela cor desejada para o background */
+    background-color: #F9A8C8;
     border-radius: 50px;
     width: 100%;
     max-width: 250px;
@@ -443,82 +421,8 @@ main{
     height: 147px;
     max-width: 300px;
     min-width: 250px;
-
-
 }
 
-@media only screen and (max-width: 1068px) {
-    .produto {
-        flex-direction: column;
-        
-    }
-
-    .produto img {
-        order: -1;
-        margin-bottom: 20px;
-    }
-
-    .produto {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 150px;
-    }
-
-    .informacao_produto {
-        width: 100%;
-        padding: 20px 0;
-    }
-
-    .descricao_produto {
-        padding: 20px 0;
-        margin-top: 215px;
-    }
-}
-
-.descricao_produto{
-    max-width: 1200px;
-    min-width: 390px;
-    height: auto;
-    border-radius: 20px;
-    border: 1px solid #E55E82;
-    padding: 16px 44px;
-    margin-bottom: 117px;
-    
-}
-
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 400px;
-    background: #E55E82; 
-}
-
-footer > img{
-    min-width: 150px;
-    max-width: 200px;
-    min-height: 125px;
-    max-height: 200px;
-}
-
-.icones_rodape > a:hover{
-    color: #F9A8C8;
-}
-.icones_rodape{
-    display: flex;
-    width: 100%;
-    justify-content:end;
-    margin-right: 5%;
-}
-
-.icones_rodape > a{
-    font-size: 50px;
-    color: white;
-    margin-left: 29px;
-}
-
-/* Novos estilos para tornar os elementos responsivos */
 .produto_mais_informacao {
     width: 100%;
     max-width: 1300px;
@@ -558,8 +462,80 @@ footer > img{
     -webkit-text-fill-color: transparent;
 }
 
+@media only screen and (max-width: 1068px) {
+    .produto {
+        flex-direction: column;  
+    }
+
+    .produto img {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .produto {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 150px;
+    }
+
+    .informacao_produto {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .descricao_produto {
+        padding: 20px 0;
+        margin-top: 215px;
+    }
+    .carrinho_mais_compra{
+        margin-top: 20px;
+    }
+}
+
+.descricao_produto{
+    max-width: 1200px;
+    min-width: 390px;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid #E55E82;
+    padding: 16px 44px;
+    margin-bottom: 117px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 400px;
+    background: #E55E82; 
+}
+
+footer > img{
+    min-width: 150px;
+    max-width: 200px;
+    min-height: 125px;
+    max-height: 200px;
+}
+
+.icones_rodape > a:hover{
+    color: #F9A8C8;
+}
+.icones_rodape{
+    display: flex;
+    width: 100%;
+    justify-content:end;
+    margin-right: 5%;
+}
+
+.icones_rodape > a{
+    font-size: 50px;
+    color: white;
+    margin-left: 29px;
+}
+
+
 @media screen and (max-width: 768px) {
-    
     .produto img {
         order: -1;
         margin-bottom: 20px;
