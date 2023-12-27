@@ -260,32 +260,28 @@ header {
 main{
     display: flex;
     justify-content: center;
-    width: 100%;
 }
 
 .produto_mais_informacao{
-    width: 100%;
     max-width: 1300px; /* Define uma largura máxima para evitar excessos */
     padding: 0 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .produto{
     max-width: 1200px;
-    max-height: 550px;
+    margin: auto;
     display: flex;
-    justify-content: space-around;
+
     align-items: center;
 }
 
 .produto > img{
     max-width: 450px;
-    min-width: 303px;
-    max-height: 450px;
-    min-height: 315px;
 }
 
 .informacao_produto{
@@ -293,10 +289,11 @@ main{
     flex-direction: column;
     justify-content: space-around;
     max-width: 520px;
-    max-height: 500px;
+    margin: auto;
     padding: 20px;
-    border: 1px solid or;
 }
+
+
 
 .informacao_produto > div >  h2{
     font-family: Merriweather Sans;
@@ -350,11 +347,10 @@ main{
 
 .carrinho_mais_compra{
     display: flex;
-    width: 100%;
+    flex-direction: column;
     max-width: 528px;   
     justify-content: space-between;
-    flex-wrap: wrap;
-
+    align-items: center;
 }
 
 .carrinho{
@@ -369,6 +365,8 @@ main{
     height: 60px;
     color: #E55E82;
     text-decoration: none;
+    margin-top: 13px;
+    
 }
 
 .carrinho:hover{
@@ -380,23 +378,24 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F9A8C8;
+    background-color: #E55E82;
     border-radius: 50px;
     width: 100%;
     max-width: 200px;
     height: 60px;
-    color: #E55E82;
+    color: #F9A8C8;
     text-decoration: none;
     font-family: Red Hat Display;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-top: 13px;
 }
 
 .compra:hover{
-    background-color: #E55E82;
-    color: #F9A8C8;
+    background-color: #F9A8C8;
+    color: #E55E82;
 }
 
 .quantidade_produto{
@@ -434,21 +433,15 @@ main{
 }
   
 .produto {
-    width: 1200px;
+    width: 100%;
+    max-width: 1119px;
     height: 550px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
   
-.informacao_produto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 520px;
-    height: 500px;
-    padding: 20px;
-}
+
   
 .informacao_produto > h2 {
     font-family: Merriweather Sans;
@@ -462,9 +455,10 @@ main{
     -webkit-text-fill-color: transparent;
 }
 
-@media only screen and (max-width: 1068px) {
+@media only screen and (max-width: 1008px) {
     .produto {
-        flex-direction: column;  
+        flex-direction: column;
+        margin: 0; 
     }
 
     .produto img {
@@ -479,26 +473,23 @@ main{
     }
 
     .informacao_produto {
-        width: 100%;
         padding: 20px 0;
     }
 
     .descricao_produto {
-        padding: 20px 0;
         margin-top: 215px;
     }
     .carrinho_mais_compra{
-        margin-top: 20px;
+        margin-top: 20px auto;
+
     }
 }
 
 .descricao_produto{
+    padding: 16px 44px; /*O PROBLEMA ESTÁ AQUI*/
     max-width: 1200px;
-    min-width: 390px;
-    height: auto;
     border-radius: 20px;
     border: 1px solid #E55E82;
-    padding: 16px 44px;
     margin-bottom: 117px;
 }
 
@@ -506,8 +497,9 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    max-width: 1440px;
     height: 400px;
+    margin: auto;
     background: #E55E82; 
 }
 
@@ -551,13 +543,11 @@ footer > img{
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 20px;
       height: auto; /* Permite altura dinâmica */
     }
 
     .carrinho, .compra{
         width: 100%;
         max-width: 300px;
-        margin-bottom: 13px;
     }
 }
