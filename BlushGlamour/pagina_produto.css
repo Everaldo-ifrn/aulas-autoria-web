@@ -319,12 +319,12 @@ main{
     -webkit-text-fill-color: transparent;
     margin-bottom: 15px;
     max-width: 1030px;
-    min-width: 390px;
+    margin: 16px 10px;
 }
 
 .descricao_produto > p{
     max-width: 1030px;
-    min-width: 390px;
+    margin: 16px 10px;
 }
 
 .informacao_produto > div > p, .informacao_produto > p, .quantidade_produto {
@@ -455,7 +455,7 @@ main{
     -webkit-text-fill-color: transparent;
 }
 
-@media only screen and (max-width: 1008px) {
+@media only screen and (max-width: 820px) {
     .produto {
         flex-direction: column;
         margin: 0; 
@@ -479,14 +479,20 @@ main{
     .descricao_produto {
         margin-top: 215px;
     }
+    
     .carrinho_mais_compra{
         margin-top: 20px auto;
-
     }
+
+    .carrinho, .compra{
+        width: 100%;
+        max-width: 300px;
+    }
+
 }
 
 .descricao_produto{
-    padding: 16px 44px; /*O PROBLEMA ESTÁ AQUI*/
+    /*padding: 16px 44px; O PROBLEMA ESTÁ AQUI*/
     max-width: 1200px;
     border-radius: 20px;
     border: 1px solid #E55E82;
@@ -546,8 +552,4 @@ footer > img{
       height: auto; /* Permite altura dinâmica */
     }
 
-    .carrinho, .compra{
-        width: 100%;
-        max-width: 300px;
-    }
 }
