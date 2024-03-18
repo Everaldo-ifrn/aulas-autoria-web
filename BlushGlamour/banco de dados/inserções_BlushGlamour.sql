@@ -1,16 +1,34 @@
 USE `mydb`;
-#DROP DATABASE `mydb`;
+-- DROP DATABASE `mydb`;
+/*
+INSERT INTO Cliente (cpf, nome, email, senha, dataNascimento, imagemPerfil) VALUES 
+	('12345678901', 'Maria S.ilva', 'maria@email.com', 'senha123', '1990-05-15', 'perfil.jpg');
 
+INSERT INTO Carrinho (carrinhoID, Cliente_cpf) VALUES 
+	(1, '12345678901');
 
+INSERT INTO Vendas (vendaID, valorTotal, carrinhoID) VALUES
+	(1, 100.0, 1);
+
+INSERT INTO Carrinho_has_Produtos (Carrinho_carrinhoID, Produtos_codigoDeBarra, quantidade, total) VALUES 
+	(1, 17745, 2, 100.0);
+*/
 SELECT
-	nomeProduto, preco, quantidade_estoque, imgCard, imgMaisVendido, imgProduto
+	p.codigoDeBarra,
+    p.nomeProduto,
+    p.descricao,
+    p.preco,
+    MAX(i.imgMaisVendido) as imgMaisVendido,
+    SUM(chp.quantidade) as total_vendido
 FROM
-	Produtos
-INNER JOIN
-	Imagens
-WHERE
-	Produtos.codigoDeBarra = Imagens.Produtos_codigoDeBarra
-
+	Vendas v
+    INNER JOIN Carrinho c ON v.carrinhoID = c.carrinhoID
+    INNER JOIN Carrinho_has_Produtos chp ON c.CarrinhoID = chp.Carrinho_carrinhoID
+    INNER JOIN Produtos p ON chp.Produtos_codigoDeBarra = p.codigoDeBarra
+    INNER JOIN Imagens i ON i.Produtos_codigoDeBarra = p.codigoDeBarra
+GROUP BY
+	p.codigoDeBarra
+LIMIT 5;
 
 /*
 -- Pegando todos os dados de Cliente específico
